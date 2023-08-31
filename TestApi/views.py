@@ -1,0 +1,21 @@
+
+from rest_framework import viewsets
+from .models import Company, Employee, Device, Checkout
+from .serializers import CompanySerializer, EmployeeSerializer, DeviceSerializer, CheckoutSerializer
+
+class CompanyViewSet(viewsets.ModelViewSet):
+    queryset = Company.objects.all()
+    serializer_class = CompanySerializer
+
+class EmployeeViewSet(viewsets.ModelViewSet):
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
+
+class DeviceViewSet(viewsets.ModelViewSet):
+    queryset = Device.objects.all()
+    serializer_class = DeviceSerializer
+
+class CheckoutViewSet(viewsets.ModelViewSet):
+    queryset = Checkout.objects.all()
+    serializer_class = CheckoutSerializer
+
